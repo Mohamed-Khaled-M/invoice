@@ -1,0 +1,70 @@
+button,
+.btn {
+  cursor: pointer;
+  padding: 1.5rem 2.5rem;
+  border: 0;
+  border-radius: 3rem;
+  font-size: 1.5rem;
+  color: $white;
+  display: inline-block;
+  position: relative;
+
+  &.red {
+    background-color: $red;
+  }
+  &.darkPurple {
+    background-color: $dark-purple;
+  }
+  &.purple {
+    background-color: $purple;
+  }
+  &.green {
+    background-color: $green;
+  }
+  &.orange {
+    background-color: $orange;
+  }
+
+  &--status {
+    padding: 1rem 3rem 1rem 4rem;
+    border-radius: 1rem;
+
+    &::before {
+      content: "";
+      width: 1rem;
+      height: 1rem;
+      border-radius: 50%;
+      position: absolute;
+      top: 50%;
+      left: 2.2rem;
+      transform: translateY(-50%)
+    }
+  }
+
+  &--paid {
+    color: $green;
+    background-color: rgba(51, 214, 160, 0.1);
+
+    &::before {
+      background-color: $green;
+    }
+  }
+
+  &--pending {
+    color: $orange;
+    background-color: rgba(255, 145, 0, 0.1);
+
+    &::before {
+      background-color: $orange;
+    }
+  }
+
+  &--draft {
+    color: #dfe3fa;
+    background-color: rgba(223, 227, 250, 0.1);
+
+    &::before {
+      background-color: #dfe3fa;
+    }
+  }
+}
